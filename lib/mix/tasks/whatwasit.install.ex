@@ -93,7 +93,7 @@ defmodule Mix.Tasks.Whatwasit.Install do
       changeset_fields: changeset_fields
     ]
     Mix.Phoenix.copy_from paths(),
-      "priv/templates/whatwasit.install/models/whatwasit", "", binding, [
+      "priv/templates/whatwasit.install/models/whatwasit", binding, [
         {:eex, "version_map.ex", "web/models/whatwasit/version.ex"},
       ]
     config
@@ -120,7 +120,7 @@ defmodule Mix.Tasks.Whatwasit.Install do
       changeset_fields: "~w(#{changeset_fields}#{add_changeset_fields})a"
     ]
     Mix.Phoenix.copy_from paths(),
-      "priv/templates/whatwasit.install/models/whatwasit", "", binding, [
+      "priv/templates/whatwasit.install/models/whatwasit", binding, [
         {:eex, "version.ex", "web/models/whatwasit/version.ex"},
       ]
     config

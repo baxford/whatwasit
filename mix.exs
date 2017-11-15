@@ -6,7 +6,7 @@ defmodule Whatwasit.Mixfile do
   def project do
     [app: :whatwasit,
      version: @version,
-     elixir: "~> 1.2",
+     elixir: "~> 1.4.4",
      elixirc_paths: elixirc_paths(Mix.env),
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
@@ -31,9 +31,9 @@ defmodule Whatwasit.Mixfile do
 
   defp deps do
     [
-      {:ecto, "~> 2.0"},
-      {:phoenix, "~> 1.1"},
-      {:postgrex, ">= 0.0.0", only: :test},
+      {:phoenix, "~> 1.3.0"},
+      {:phoenix_ecto, "~> 3.2"},
+      {:postgrex, ">= 0.13.0"},
       {:ex_doc, "== 0.11.5", only: :dev},
       {:earmark, "== 0.2.1", only: :dev, override: true},
     ]
